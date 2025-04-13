@@ -22,11 +22,11 @@
 
     /* TOPO DO SITE */
     section.topo-do-site .flex {
-        gap: 0px;
+        gap: 40px;
     }
 
     section.topo-do-site {
-        padding: 0px 8%;
+        padding: 20px 8%;
     }
 
     .topo-do-site h1 {
