@@ -1,5 +1,10 @@
 @media screen and (max-width: 1020px) {
 
+    body {
+        overflow-x: hidden;
+    }
+    
+
     /* CLASSES GERAIS */
     .flex {
         flex-direction: column;
@@ -23,10 +28,17 @@
     /* TOPO DO SITE */
     section.topo-do-site .flex {
         gap: 40px;
+        align-items: center;
     }
 
     section.topo-do-site {
-        padding: 20px 8%;
+        padding: 0px 8%;
+        padding-top: 0;
+        margin-top: 0;
+        margin: 0;
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 
     .topo-do-site h1 {
@@ -44,6 +56,9 @@
 
     .topo-do-site .img-topo-site img {
         width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        display: block;
     }
 
     /* ESPECIALIDADES */
@@ -68,11 +83,11 @@
     }
 
     .btn-social {
-        margin-left: 113px;
+        margin-left: 90px;
     }
 
     .img-sobre img {
-        padding: 0 20px;
+        padding: 0 10px;
         justify-content: center;
     }
 
