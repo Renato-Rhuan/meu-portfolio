@@ -470,6 +470,34 @@ form .btn-enviar input:hover{
     transform: scale(1.05);
 }
 
+ /* Estilo para a mensagem de sucesso */
+.mensagem {
+    display: none; /* Começa escondida */
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Espaçamento ao redor */
+    position: fixed; /* Para posicionar no canto */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    border-radius: 5px; /* Bordas arredondadas */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+/* Estilo para a barra de carregamento */
+.carregamento-container {
+    position: relative; /* Para posicionar a barra de carregamento */
+    height: 5px; /* Altura da barra */
+    background-color: white; /* Cor de fundo da barra de carregamento */
+}
+
+.carregamento {
+    height: 100%; /* Altura total do container */
+    width: 0; /* Começa com largura 0 */
+    background-color: darkblue; /* Cor da barra de carregamento */
+    transition: width 3s; /* Transição suave de 3 segundos */
+}
+
 /* ESTILO DO RODAPÉ */
 
 footer{
