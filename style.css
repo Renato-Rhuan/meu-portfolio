@@ -470,33 +470,56 @@ form .btn-enviar input:hover{
     transform: scale(1.05);
 }
 
- /* Estilo para a mensagem de sucesso */
+/* Estilo para a mensagem de sucesso */
 .mensagem {
     display: none; /* Começa escondida */
     background-color: black; /* Fundo preto */
     color: white; /* Texto branco */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px; /* Espaçamento ao redor */
-    position: fixed; /* Para posicionar no canto */
-    top: 20px; /* Distância do topo */
-    right: 20px; /* Distância da direita */
-    border-radius: 5px; /* Bordas arredondadas */
-    z-index: 1000; /* Fica acima de outros elementos */
+    padding: 20px;
+    margin: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    font-weight: bold;
 }
 
-/* Estilo para a barra de carregamento */
+/* Container da barra de carregamento */
 .carregamento-container {
-    position: relative; /* Para posicionar a barra de carregamento */
-    height: 5px; /* Altura da barra */
-    background-color: white; /* Cor de fundo da barra de carregamento */
+    position: relative;
+    height: 5px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
+/* Barra animada */
 .carregamento {
-    height: 100%; /* Altura total do container */
-    width: 0; /* Começa com largura 0 */
-    background-color: darkblue; /* Cor da barra de carregamento */
-    transition: width 3s; /* Transição suave de 3 segundos */
+    height: 100%;
+    width: 30%;
+    background-color: darkblue;
+    position: absolute;
+    left: -30%;
+    animation: mover 1.5s infinite ease-in-out;
+    border-radius: 5px;
 }
+
+/* Animação de movimento contínuo */
+@keyframes mover {
+    0% {
+        left: -30%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
 
 /* ESTILO DO RODAPÉ */
 
