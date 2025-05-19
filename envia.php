@@ -1,22 +1,30 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = trim($_POST['nome']);
+    $email = trim($_POST['email']);
+    $telefone = trim($_POST['telefone']);
+    $descricao = trim($_POST['descricao']);
 
-    $nome = addcslashes($_POST['nome']);
-    $email = addcslashes($_POST['email']);
-    $telefone = addcslashes($_POST['telefone']);
-    $descricao = addcslashes($_POST['descricao']);
-
-    $para = "renatoclahs12@gmail.com";
-    $assunto = "Fale comigo - Portfolio";
-
-    $corpo = "Nome: ".$nome."\n"."Email: ".$email."\n"."Telefone: ".$telefone."\n"."Descrição: ".$descricao;
-
-    $cabeca = "From: renatoclahs12@gmail.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
-
-    if(mail($para,$assunto,$corpo,$cabeca)){
-        echo("E-mail enviado com sucesso!");
-    }else{
-        echo("Houve um erro ao enviar o email!");
+    if (empty($nome) || empty($email) || empty($telefone) || empty($descricao)) {
+        echo "Por favor, preencha todos os campos.";
+        exit;
     }
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Email inválido.";
+        exit;
+    }
 
+    $to = "renatoclahs12@gmail.com"; 
+    $subject = "Formulário de Contato";
+    $body = "Nome: $nome\nEmail: $email\nTelefone: $telefone\nDescricao: $descricao";
+
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Mensagem enviada com sucesso!";
+    } else {
+        echo "Falha ao enviar a mensagem.";
+    }
+}
 ?>
