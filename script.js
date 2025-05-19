@@ -7,43 +7,57 @@ var typed = new Typed(".multiple-text", {
     loop: true        // Continuar o loop da animação
 });
 
-
 // MEU FORMULARIO
-
- // Aqui estamos adicionando um evento para quando o formulário for enviado
-    document.getElementById('meuformulario').addEventListener('submit', function(event) {
-    // Previne o envio do formulário se as validações falharem
+document.getElementById('meuformulario').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Obtém os valores dos campos
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const descricao = document.getElementById('descricao').value.trim();
 
-    // Validação do email
-    if (!email.endsWith('@gmail.com')) {
-        alert('Por favor, insira um email válido que termine com @gmail.com');
-        return; // Para o código aqui se a validação falhar
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, insira um e-mail válido.');
+        return;
     }
 
-    // Validação do telefone (exemplo: 11 dígitos)
-    const telefoneRegex = /^[0-9]{11}$/; // Aceita somente 11 dígitos numéricos
+    const telefoneRegex = /^[0-9]{11}$/;
     if (!telefoneRegex.test(telefone)) {
         alert('Por favor, insira um telefone válido com 11 dígitos.');
-        return; // Para o código aqui se a validação falhar
+        return;
     }
 
-    // Aqui você pode adicionar a lógica para enviar os dados
-    // Simulação de envio de e-mail
-    console.log(`Dados enviados: Nome: ${document.getElementById('nome').value}, Email: ${email}, Telefone: ${telefone}`);
+    const dados = new FormData();
+    dados.append('nome', nome);
+    dados.append('email', email);
+    dados.append('telefone', telefone);
+    dados.append('descricao', descricao);
 
-    // Exibe a mensagem de sucesso
-    const mensagem = document.getElementById('mensagem');
-    mensagem.style.display = 'block'; // Mostra a mensagem
-    const carregamento = document.querySelector('.carregamento');
-    carregamento.style.width = '100%'; // Começa o carregamento
+    fetch('envia.php', {
+        method: 'POST',
+        body: dados
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data.includes('sucesso')) {
+            const mensagem = document.getElementById('mensagem');
+            mensagem.style.display = 'block';
+            const carregamento = document.querySelector('.carregamento');
+            carregamento.style.width = '100%';
 
-    // Define um tempo para esconder a mensagem após o carregamento
-    setTimeout(() => {
-        mensagem.style.display = 'none'; // Esconde a mensagem depois de 3 segundos
-    }, 3000); // 3000ms = 3 segundos
+            setTimeout(() => {
+                mensagem.style.display = 'none';
+                carregamento.style.width = '0%';
+            }, 3000);
+
+            document.getElementById('meuformulario').reset();
+        } else {
+            alert('Erro ao enviar: ' + data);
+        }
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar o formulário. Tente novamente mais tarde.');
+    });
 });

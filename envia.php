@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = trim($_POST['nome']);
-    $email = trim($_POST['email']);
-    $telefone = trim($_POST['telefone']);
-    $descricao = trim($_POST['descricao']);
+    $nome = trim(addslashes($_POST['nome']));
+    $email = trim(addslashes($_POST['email']));
+    $telefone = trim(addslashes($_POST['telefone']));
+    $descricao = trim(addslashes($_POST['descricao']));
 
     if (empty($nome) || empty($email) || empty($telefone) || empty($descricao)) {
         echo "Por favor, preencha todos os campos.";
@@ -15,16 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "renatoclahs12@gmail.com"; 
-    $subject = "Formulário de Contato";
-    $body = "Nome: $nome\nEmail: $email\nTelefone: $telefone\nDescricao: $descricao";
+    $para = "renatoclahs12@gmail.com";
+    $assunto = "Fale comigo - Portfolio";
+    $corpo = "Nome: $nome\nEmail: $email\nTelefone: $telefone\nDescrição: $descricao";
 
-    $headers = "From: $email";
+    $cabeca = "From: renatoclahs12@gmail.com\r\n";
+    $cabeca .= "Reply-To: $email\r\n";
+    $cabeca .= "X-Mailer: PHP/" . phpversion();
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Mensagem enviada com sucesso!";
+    if (mail($para, $assunto, $corpo, $cabeca)) {
+        echo "sucesso";
     } else {
-        echo "Falha ao enviar a mensagem.";
-    }
+        echo "erro";
+    }
 }
 ?>
+
