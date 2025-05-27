@@ -20,6 +20,7 @@
     <title>RHC Dev.</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/responsividade.css">
+    <link rel="stylesheet" href="api/send-email.js">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Link do Typed.js -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
@@ -216,7 +217,7 @@
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
-                <form id="meuformulario" method="post" action="envia.php">
+                <form id="meuformulario" method="post" action="api/send-email.js">
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
                     <input type="text" name="email" id="email" placeholder="Seu e-mail:" required>
                     <input type="text" name="telefone" id="telefone" placeholder="Seu celular:" required>
