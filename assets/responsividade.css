@@ -1,124 +1,119 @@
 @media screen and (max-width: 1020px) {
 
-    body {
-        overflow-x: hidden;
-    }
-    
+  body {
+    overflow-x: hidden;
+  }
 
-    /* CLASSES GERAIS */
-    .flex {
-        flex-direction: column;
-    }
+  /* ================= CLASSES GERAIS ================= */
+  .flex {
+    flex-direction: column;
+  }
 
-    h2.titulo {
-        font-size: 34px;
-        line-height: 30px;
-    }
+  h2.titulo {
+    font-size: 34px;
+    line-height: 36px;
+  }
 
-    .topo-do-site .flex {
-        flex-direction: column-reverse;
-    }
+  /* ================= TOPO DO SITE ================= */
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: center;
+  }
 
-    /* CABEÇALHO */
-    .menu-desktop,
-    .btn-contato {
-        display: none;
-    }
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
 
-    /* TOPO DO SITE */
-    section.topo-do-site .flex {
-        gap: 40px;
-        align-items: center;
-    }
+  section.topo-do-site {
+    padding: 0 8%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
 
-    section.topo-do-site {
-        padding: 0px 8%;
-        padding-top: 0;
-        margin-top: 0;
-        margin: 0;
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
+  .topo-do-site h1 {
+    font-size: 45px;
+  }
 
-    .topo-do-site h1 {
-        font-size: 45px;
-    }
+  .topo-do-site h3 {
+    font-size: 40px;
+  }
 
-    .topo-do-site h3 {
-        font-size: 40px;
-    }
+  .topo-do-site .multiple-text {
+    font-size: 35px;
+  }
 
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 
-    .topo-do-site .multiple-text {
-        font-size: 35px;
-    }
+  /* ================= ESPECIALIDADES ================= */
+  section.especialidades {
+    padding: 40px 8%;
+  }
 
-    .topo-do-site .img-topo-site img {
-        width: 100%;
-        margin-top: 0;
-        padding-top: 0;
-        display: block;
-    }
+  /* ================= SOBRE ================= */
+  section.sobre {
+    padding: 80px 8%;
+  }
 
-    /* ESPECIALIDADES */
-    section.especialidades {
-        padding: 40px 8%;
-    }
+  .sobre .txt-sobre h2 {
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
 
-    /* SOBRE */
-    section .sobre {
-        padding: 80px 8%;
-    }
+  .sobre .txt-sobre p {
+    margin: 40px 10px;
+    text-align: center;
+  }
 
-    .sobre .txt-sobre h2{
-        font-size: 34px;
-        line-height: 35px;
-        text-align: center;
-    }
+  .btn-social {
+    margin-left: 90px;
+  }
 
-    .sobre .txt-sobre p{
-        margin: 40px 10px;
-        text-align: center;
-    }
+  .img-sobre img {
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .btn-social {
-        margin-left: 90px;
-    }
+  /* ================= PORTFÓLIO ================= */
+  section.portfolio {
+    padding: 80px 8%;
+  }
 
-    .img-sobre img {
-        padding: 0 10px;
-        justify-content: center;
-    }
+  section.portfolio .flex {
+    flex-direction: row; /* mantém horizontal */
+    gap: 30px;           /* espaçamento menor para telas menores */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;  /* necessário para loop infinito */
+  }
 
-    /* PORTFÓLIO */
-    section.portfolio{
-        padding: 80px 8%;
-    }
+  .img-port {
+    width: 100%;
+    max-width: 280px; /* reduz largura dos slides */
+    flex-shrink: 0;
+  }
 
-    .img-port{
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
+  /* ================= RODAPÉ ================= */
+  footer .flex {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    section.portfolio .flex{
-        gap: 60px;
-    }
+  footer .line-footer {
+    text-align: center;
+  }
 
-    /* RODAPÉ */
-    footer .flex{
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    footer .line-footer{
-       text-align: center;
-    }
-
-    footer .line-footer .btn-social{
-        gap: 10px; /* espaçamento entre os botões */
-        margin: 0 auto; /* centraliza */
-    }
-
+  footer .line-footer .btn-social {
+    gap: 10px;
+    margin: 0 auto;
+  }
 }

@@ -12,7 +12,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 #particles-js {
     position: fixed;
@@ -49,7 +49,7 @@ header {
     padding: 40px 4%;
 }
 
-header > .interface {
+header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,12 +91,12 @@ header .btn-contato button:hover {
 }
 
 /* ESTILO DO MENU MOBILE */
-.btn-abrir-menu i{
+.btn-abrir-menu i {
     color: blue;
     font-size: 40px;
 }
 
-.menu-mobile{
+.menu-mobile {
     background-color: #000;
     height: 100%;
     position: fixed;
@@ -108,19 +108,19 @@ header .btn-contato button:hover {
     transition: .5s;
 }
 
-.menu-mobile.abri-menu{
+.menu-mobile.abri-menu {
     width: 70%;
 }
 
-.menu-mobile.abri-menu ~ .overlay-menu{
+.menu-mobile.abri-menu~.overlay-menu {
     display: block;
 }
 
-.menu-mobile .btn-fechar{
+.menu-mobile .btn-fechar {
     padding: 20px 5%;
 }
 
-.menu-mobile .btn-fechar i{
+.menu-mobile .btn-fechar i {
     color: blue;
     font-size: 30px;
 }
@@ -129,7 +129,7 @@ header .btn-contato button:hover {
     text-align: right;
 }
 
-.menu-mobile nav ul li a{
+.menu-mobile nav ul li a {
     color: #fff;
     font-size: 20px;
     font-weight: 300;
@@ -137,12 +137,12 @@ header .btn-contato button:hover {
     display: block;
 }
 
-.menu-mobile nav ul li a:hover{
+.menu-mobile nav ul li a:hover {
     background-color: blue;
     color: #000;
 }
 
-.overlay-menu{
+.overlay-menu {
     background-color: #000000a6;
     width: 100%;
     height: 100%;
@@ -153,7 +153,7 @@ header .btn-contato button:hover {
     display: none;
 }
 
- /* TOPO DO SITE */
+/* TOPO DO SITE */
 section.topo-do-site {
     padding: 40px 4%;
 }
@@ -172,7 +172,7 @@ section.topo-do-site .flex {
 .txt-topo-site h3 {
     font-size: 70px;
     font-weight: 300;
-    color:#fff;
+    color: #fff;
 }
 
 .txt-topo-site .multiple-text {
@@ -186,10 +186,11 @@ section.topo-do-site .flex {
 
 
 @keyframes flutuar {
-    0%{
+    0% {
         top: 0;
     }
-    100%{
+
+    100% {
         top: 30px;
     }
 }
@@ -211,12 +212,12 @@ section.especialidades .flex {
     transition: .2s;
 }
 
-.especialidades .especialidades-box:hover{
+.especialidades .especialidades-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 13px #ffffff79;
 }
 
-.especialidades .especialidades-box i{
+.especialidades .especialidades-box i {
     font-size: 70px;
     color: blue;
 }
@@ -226,7 +227,7 @@ section.especialidades .flex {
     margin: 15px 0;
 }
 
-.especialidades .skills-box{
+.especialidades .skills-box {
     color: #fff;
     padding: 40px;
     border-radius: 20px;
@@ -234,7 +235,7 @@ section.especialidades .flex {
     transition: .2s;
 }
 
-.especialidades .skills-box:hover{
+.especialidades .skills-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 13px #ffffff79;
 }
@@ -244,37 +245,37 @@ section.especialidades .flex {
     margin: 15px 0;
 }
 
-.especialidades .skills-box .icone-habilidade{
+.especialidades .skills-box .icone-habilidade {
     font-size: 70px;
     color: blue;
 }
 
-.especialidades .skills-box .html-icone{
+.especialidades .skills-box .html-icone {
     font-size: 50px;
     color: #fff;
 }
 
-.especialidades .skills-box .css-icone{
+.especialidades .skills-box .css-icone {
     font-size: 50px;
     color: #fff;
 }
 
-.especialidades .skills-box .javascript-icone{
+.especialidades .skills-box .javascript-icone {
     font-size: 50px;
     color: #fff;
 }
 
-.especialidades .skills-box .html-icone:hover{
+.especialidades .skills-box .html-icone:hover {
     color: rgb(255, 102, 0);
     transform: scale(1.05);
 }
 
-.especialidades .skills-box .css-icone:hover{
+.especialidades .skills-box .css-icone:hover {
     color: rgb(0, 119, 255);
     transform: scale(1.05);
 }
 
-.especialidades .skills-box .javascript-icone:hover{
+.especialidades .skills-box .javascript-icone:hover {
     color: rgb(255, 238, 0);
     transform: scale(1.05);
 }
@@ -284,35 +285,35 @@ section .sobre {
     padding: 40px 4%;
 }
 
-section .sobre .flex{
+section .sobre .flex {
     align-items: center;
     gap: 90px;
 }
 
-.sobre .txt-sobre{
+.sobre .txt-sobre {
     color: #fff;
 }
 
-.sobre .txt-sobre h2{
+.sobre .txt-sobre h2 {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.sobre .txt-sobre h2 span{
+.sobre .txt-sobre h2 span {
     color: blue;
     display: block;
     text-align: center;
 }
 
-.sobre .txt-sobre p{
+.sobre .txt-sobre p {
     margin: 20px 0;
     text-align: right;
 }
 
 
-.sobre .txt-sobre .btn-social .instagram{
+.sobre .txt-sobre .btn-social .instagram {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -327,7 +328,7 @@ section .sobre .flex{
     align-items: center;
 }
 
-.sobre .txt-sobre .btn-social .github{
+.sobre .txt-sobre .btn-social .github {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -342,7 +343,7 @@ section .sobre .flex{
     align-items: center;
 }
 
-.sobre .txt-sobre .btn-social .linkedin{
+.sobre .txt-sobre .btn-social .linkedin {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -355,171 +356,181 @@ section .sobre .flex{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.sobre .txt-sobre .btn-social .instagram:hover{
+.sobre .txt-sobre .btn-social .instagram:hover {
     color: #ff008c;
     transform: scale(1.05);
 }
 
-.sobre .txt-sobre .btn-social .github:hover{
+.sobre .txt-sobre .btn-social .github:hover {
     transform: scale(1.05);
 }
 
-.sobre .txt-sobre .btn-social .linkedin:hover{
+.sobre .txt-sobre .btn-social .linkedin:hover {
     color: #008cff;
     transform: scale(1.05);
 }
 
-/*ESTILO DO PORTFÓLIO*/
+
+/* Container flexível */
+/* ============================= */
+/* PORTFOLIO CARROSSEL */
 section.portfolio {
-  padding: 80px 4%;
-  box-shadow: 0 0 40px 10px #ffffff1d;
-  position: relative;
-  overflow: hidden;
+    padding: 80px 4%;
+    position: relative;
+    overflow: hidden;
+    
 }
 
-section.portfolio .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-  gap: 30px;
+/* Wrapper do carrossel (para posicionar botões/indicadores) */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
+/* Container flexível do carrossel */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slides individuais */
 .img-port {
-  width: 300px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
-  position: relative;
-  transition: all 0.5s ease;
-  flex-shrink: 0;
-  cursor: pointer;
-  opacity: 0.6;
-  transform: scale(0.8);
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    opacity: 0.6;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    position: relative;
 }
 
-.img-port.active {
-  width: 360px;
-  height: 460px;
-  opacity: 1;
-  transform: scale(1);
-  z-index: 5;
+/* Slide ativo (JS ou hover) */
+.img-port.active,
+.img-port:hover {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
 }
 
+/* Overlay */
 .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: #000000b8;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  opacity: 0;
-  transition: .5s;
-  text-align: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.72);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
 }
 
-.img-port.active:hover .overlay {
-  opacity: 1;
+.img-port.active .overlay,
+.img-port:hover .overlay {
+    opacity: 1;
 }
 
+/* Botões dentro do overlay */
 .botoes-projeto {
-  display: flex;
-  gap: 10px;
-  margin-top: auto;
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
 }
 
 .botoes-projeto button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  transition: .3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .botoes-projeto .btn-link {
-  background-color: blue;
-  color: white;
+    background-color: #007bff;
+    color: white;
 }
 
 .botoes-projeto .btn-github {
-  background-color: #333;
-  color: white;
+    background-color: #333;
+    color: white;
 }
 
 .botoes-projeto button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Botões prev/next */
-/* Botões de navegação */
+/* ============================= */
+/* INDICADORES */
+#indicators {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ============================= */
+/* BOTÕES PREV / NEXT */
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
 }
 
 .carousel-btn:hover {
-  background: white;
-  color: blue;
+    background: rgba(0, 0, 0, 0.8);
 }
 
-.carousel-btn.prev { left: 20px; }
-.carousel-btn.next { right: 20px; }
-
-/* Indicadores */
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 10px;
-}
-
-.carousel-indicators span {
-  width: 12px;
-  height: 12px;
-  background: #777;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.carousel-indicators .active {
-  background: blue;
-  transform: scale(1.2);
-}
 
 /*ESTILO DO FORMULÁRIO DE CONTATO*/
-section.formulario{
+section.formulario {
     padding: 80px 4%;
 }
 
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -529,7 +540,8 @@ form{
     margin-top: 40px;
 }
 
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     background-color: #242424;
     border: 0;
@@ -540,17 +552,17 @@ form input, form textarea{
     font-size: 18px;
 }
 
-form textarea{
+form textarea {
     resize: none;
     max-height: 200px;
 }
 
-form .btn-enviar{
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
 
-form .btn-enviar input{
+form .btn-enviar input {
     width: 120px;
     background-color: blue;
     color: #fff;
@@ -559,16 +571,19 @@ form .btn-enviar input{
     transition: .2s;
 }
 
-form .btn-enviar input:hover{
+form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px blue;
     transform: scale(1.05);
 }
 
 /* Estilo para a mensagem de sucesso */
 .mensagem {
-    display: none; /* Começa escondida */
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco */
+    display: none;
+    /* Começa escondida */
+    background-color: black;
+    /* Fundo preto */
+    color: white;
+    /* Texto branco */
     padding: 20px;
     margin: 20px;
     position: fixed;
@@ -606,9 +621,11 @@ form .btn-enviar input:hover{
     0% {
         left: -30%;
     }
+
     50% {
         left: 50%;
     }
+
     100% {
         left: 100%;
     }
@@ -617,16 +634,16 @@ form .btn-enviar input:hover{
 
 /* ESTILO DO RODAPÉ */
 
-footer{
+footer {
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
-footer .flex{
+footer .flex {
     justify-content: space-between;
 }
 
-footer .line-footer{
+footer .line-footer {
     padding: 20px 0;
 }
 
@@ -634,7 +651,7 @@ footer .line-footer{
     border-top: 2px solid blue;
 }
 
-.line-footer .btn-social .instagram{
+.line-footer .btn-social .instagram {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -649,7 +666,7 @@ footer .line-footer{
     align-items: center;
 }
 
-.line-footer .btn-social .github{
+.line-footer .btn-social .github {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -664,7 +681,7 @@ footer .line-footer{
     align-items: center;
 }
 
-.line-footer .btn-social .linkedin{
+.line-footer .btn-social .linkedin {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -677,28 +694,28 @@ footer .line-footer{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.line-footer .btn-social .instagram:hover{
+.line-footer .btn-social .instagram:hover {
     color: #ff008c;
     transform: scale(1.05);
 }
 
-.line-footer .btn-social .github:hover{
+.line-footer .btn-social .github:hover {
     transform: scale(1.05);
 }
 
-.line-footer .btn-social .linkedin:hover{
+.line-footer .btn-social .linkedin:hover {
     color: #008cff;
     transform: scale(1.05);
 }
 
-footer .line-footer p i{
+footer .line-footer p i {
     color: blue;
     font-size: 22px;
 }
 
-footer .line-footer p a{
+footer .line-footer p a {
     color: #fff;
 }
